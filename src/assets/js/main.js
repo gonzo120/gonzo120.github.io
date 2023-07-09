@@ -45,7 +45,7 @@
             autoplayHoverPause: true,
         });
     });
-
+        //clase.menu-item
     $(document).on('click','.portfolio-block, .menu-item', function() {
 
         //Portfolio masonry
@@ -56,7 +56,7 @@
             },
             itemSelector: '.portfolio-item'
         });
-        $(document).on('click', 'li, #filters', function() {
+        $(document).on('click', 'li','#filters', function() {
             $('#filters li').removeClass('active');
             $(this).addClass('active');
             var filterValue = $(this).attr('data-filter');
@@ -110,7 +110,7 @@
         $('.inline-menu-container').addClass('showx');
         $('.inline-menu-container.style2').addClass('dark');
     });
-    //On Click Open About/Resume Block
+    //On Click Open About/Resume Block // le agregamos que pertenece al documento activo
     $(document).on('click','.about-block, .menu-item.about', function() {
         $('.content-blocks').removeClass('showx');
         $('.content-blocks.about').addClass('showx');
