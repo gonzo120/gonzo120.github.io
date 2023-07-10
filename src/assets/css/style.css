@@ -463,7 +463,9 @@ a:not([href]):not([tabindex]) {
 .opacity0 {
     opacity: 0.0;
 }
-
+.github-icon {
+    color: black;
+  }
 .gradient-overlay1 {
     background: #EB3349;
     background: -webkit-linear-gradient(to right, #F45C43, #EB3349);
