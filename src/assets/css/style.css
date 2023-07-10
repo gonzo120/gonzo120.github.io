@@ -34,7 +34,16 @@
                         0. General Styles
 
 -------------------------------------------------------------------*/
-
+.logros-title {
+    font-weight: bold;
+  }
+  
+  .logros-list {
+    list-style-type: disc;
+    padding-left: 3em;
+    text-indent: 0.5em; /* Ajusta el valor según el espaciado deseado */
+  }
+  
 body {
     font: 400 14px 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;

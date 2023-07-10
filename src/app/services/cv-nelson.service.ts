@@ -6,25 +6,57 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CvNelsonService {
+  dataProfesional: any[] = [];
+  dataExperiencia: any[] = [];
+  dataHabilidades: any[] = [];
+  dataEducacion: any[] = [];
+  dataEducacion_informal: any[] = [];
+  
   //las variables empiezan vacias
-  private urlApiProfesional = 'https://portafolio-ngc-default-rtdb.firebaseio.com/Profesional.json';
-  private urlApiExperiencia = 'https://portafolio-ngc-default-rtdb.firebaseio.com/Experiencia.json';
-  private urlApiHabilidades = 'https://portafolio-ngc-default-rtdb.firebaseio.com/Habilidades.json';
-  private urlApiEducacion = 'https://portafolio-ngc-default-rtdb.firebaseio.com/Educacion.json';
+  
 
-  constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient){ 
+    this.getDataProfesional();
+    this.getDataExperiencia();
+    this.getDataHabilidades();
+    this.getDataEducacion();
+    this.getDataEducacionInformal();
+  }
 
-    public getDataProfesional(): Observable<any> {
-      return this.http.get<any>(this.urlApiProfesional);
-    }
-    public getDataExperiencia(): Observable<any> {
-      return this.http.get<any>(this.urlApiExperiencia);
-    }
-    public getDataHabilidades(): Observable<any> {
-      return this.http.get<any>(this.urlApiHabilidades);
-    }
-    public getDataEducacion(): Observable<any> {
-      return this.http.get<any>(this.urlApiEducacion);
-    }
+    public getDataProfesional() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/Profesional.json')
+      .subscribe((resp:any) => {
+        this.dataProfesional = resp;
+        console.log(resp);
+      });
+      }
+    public getDataExperiencia() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/Experiencia.json')
+      .subscribe((resp:any) => {
+        this.dataExperiencia = resp;
+        console.log(resp);
+      });
+      }
+    public getDataHabilidades() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/Habilidades.json')
+      .subscribe((resp:any) => {
+        this.dataHabilidades = resp;
+        console.log(resp);
+      });
+      }
+    public getDataEducacion() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/Educacion.json')
+      .subscribe((resp:any) => {
+        this.dataEducacion = resp;
+        console.log(resp);
+      });
+      }
+    public getDataEducacionInformal() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/Educacion_informal.json')
+      .subscribe((resp:any) => {
+        this.dataEducacion_informal = resp;
+        console.log(resp);
+      });
+      }
   
 }
