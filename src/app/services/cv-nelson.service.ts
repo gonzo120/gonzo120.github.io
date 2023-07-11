@@ -12,7 +12,7 @@ export class CvNelsonService {
   dataEducacion: any[] = [];
   dataEducacion_informal: any[] = [];
   dataProyectosDiseno: any[] = [];
-  
+  dataIA: any[] = [];
   //las variables empiezan vacias
   
 
@@ -23,6 +23,7 @@ export class CvNelsonService {
     this.getDataEducacion();
     this.getDataEducacionInformal();
     this.getDataProyectosDiseno();
+    this.getDataIA();
   }
 
     public getDataProfesional() {
@@ -67,5 +68,14 @@ export class CvNelsonService {
         console.log(resp);
       });
       }
+    public getDataIA() {
+      this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/IA.json')
+      .subscribe((resp:any) => {
+        this.dataIA = resp;
+        console.log(resp);
+      });
+      }
+
+    
   
 }
