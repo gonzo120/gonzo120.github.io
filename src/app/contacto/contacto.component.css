@@ -1,0 +1,19 @@
+.texto-imagen {
+  overflow: hidden;
+}
+
+.imagen {
+  float: right;
+  margin-left: 10px;
+  shape-outside: rect(0, 0, auto, auto);
+}
+
+.texto-contenedor {
+  overflow: hidden;
+}
+
+.referencia {
+    font-size: 12px;
+    color: black;
+  }
+  

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.texto-imagen {
+    display: flex;
+    align-items: center;
+}
+  
+.imagen {
+    margin-left: 50px; /* Ajusta el margen izquierdo según tus necesidades */
+   
+}
