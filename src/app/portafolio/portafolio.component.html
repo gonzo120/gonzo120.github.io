@@ -5,11 +5,16 @@
             <h3 class="block-title">{{Proyectos.Nombre}} </h3>
             <!--<h3 class="subheading">¡Hola! soy Nelson Gonzalez Contreras <strong>Programador BackEnd & Cientifico de datos Junior</strong></h3>-->
             <p style="text-align: justify;">{{Proyectos.Descripcion}}</p>
+            <p style="text-align: justify;">{{Proyectos.Descripcion2}}</p>
+            <p style="text-align: justify;">{{Proyectos.Descripcion3}}</p>
             <p class="logros-title">{{Proyectos.Informacion}}</p>
             <p style="text-align: justify;">{{Proyectos.InfoGit}}
-                <a href="{{Proyectos.GitHub}}" target="_blank">
-                <i class="ion-social-github github-icon" style="font-size: 34px;"></i>
-                </a>
+                <ng-container *ngIf="Proyectos.GitHub">
+                    <!-- Muestra el icono de GitHub -->
+                    <a href="{{Proyectos.GitHub}}" target="_blank">
+                      <i class="ion-social-github github-icon" style="font-size: 34px;"></i>
+                    </a>
+                  </ng-container>
             </p>
             <p class="logros-title">{{Proyectos.Encargado}}</p>
             <p style="text-align: justify;">{{Proyectos.infoPersonal}}</p>
@@ -27,7 +32,7 @@
         </div>
     </div>
     <div class="block-content">
-        <h3 class="block-title">Proyecto Spotify</h3>
+        <h3 class="block-title">Más Proyectos</h3>
             <h3 class="subheading"> <strong></strong></h3>
             <p style="text-align: justify;"></p>
             
