@@ -1,0 +1,17 @@
+.imagen1 {
+    float: right;
+    margin-left: 5px;
+    shape-outside: rect(0, 0, auto, auto);
+    max-width: 100%; /* Ajustar el ancho máximo de la imagen al tamaño del contenedor */
+    max-height: 300px; /* Establecer una altura máxima de 300px para la imagen */
+    object-fit: contain; /* Ajustar proporcionalmente la imagen dentro del contenedor */
+}
+
+.imagen2 {
+    float: left;
+    margin-left: 10px;
+    shape-outside: rect(0, 0, auto, auto);
+    max-width: 100%; /* Ajustar el ancho máximo de la imagen al tamaño del contenedor */
+    max-height: 300px; /* Establecer una altura máxima de 300px para la imagen */
+    object-fit: contain; /* Ajustar proporcionalmente la imagen dentro del contenedor */
+  }

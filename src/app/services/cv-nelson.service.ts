@@ -13,6 +13,7 @@ export class CvNelsonService {
   dataEducacion_informal: any[] = [];
   dataProyectosDiseno: any[] = [];
   dataIA: any[] = [];
+  dataScience: any[] = [];
   //las variables empiezan vacias
   
 
@@ -24,6 +25,7 @@ export class CvNelsonService {
     this.getDataEducacionInformal();
     this.getDataProyectosDiseno();
     this.getDataIA();
+    this.getDataScience();
   }
 
     public getDataProfesional() {
@@ -75,6 +77,15 @@ export class CvNelsonService {
         console.log(resp);
       });
       }
+    public getDataScience(){ 
+     this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/DataScience.json',{})
+     .subscribe((res:any)=>{
+      this.dataScience = res;
+        console.log('DataScience',res);
+     }, error => console.log(error)
+        
+     );
+    }
 
     
   
