@@ -74,7 +74,7 @@ export class CvNelsonService {
       this.http.get('https://portafolio-ngc-default-rtdb.firebaseio.com/IA.json')
       .subscribe((resp:any) => {
         this.dataIA = resp;
-        console.log(resp);
+        console.log('Data IA',resp);
       });
       }
     public getDataScience(){ 

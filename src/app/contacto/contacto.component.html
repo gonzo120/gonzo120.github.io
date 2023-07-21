@@ -10,6 +10,18 @@
                         <div class="post-thumbnail">
                         </div>
                         <div class="post-title">
+                            <ng-container *ngIf="IA.VideoYoutube == 1"> 
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    
+                                    <iframe  class="embed-responsive-item" width="962" height="541" src="https://www.youtube.com/embed/9Dur_oUMGG8" title="{{IA.title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div></ng-container>
+
+                            <ng-container *ngIf="IA.VideoYoutube == 2"> 
+                            <div class="embed-responsive embed-responsive-16by9">
+                                
+                                <iframe  class="embed-responsive-item" width="962" height="541" src="https://www.youtube.com/embed/iX_on3VxZzk" title="{{IA.title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div></ng-container>
+                            
                             <a href="#"><h2>{{IA.Titulo}}</h2></a>
                             <p class="post-info">
                                 <span class="post-author">Realizado por {{IA.Autor}}</span>
