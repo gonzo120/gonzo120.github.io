@@ -395,7 +395,7 @@ a:not([href]):not([tabindex]) {
 .home .bgScroll {
     animation: 40s linear 0s normal none infinite running bgScroll;
     background: black url(../images/bg/scroll.jpeg) repeat scroll center top;
-    background-size: 1400px;
+    background-size: 1600px;
 }
 
 .bgScroll {
@@ -2844,4 +2844,23 @@ h4.package {
 
 .no-cursor .cursor {
     background-color: transparent;
+}
+.name-block-container h2 span {
+    display: inline-block;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid;
+    width: 0;
+    animation: typing 7s steps(22) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 55%;
+    }
+    
 }
