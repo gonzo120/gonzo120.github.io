@@ -2,8 +2,17 @@
     <section class="content" id="about">
         <div class="block-content">
             <h3 class="block-title">Perfil</h3>
-            <h3 class="subheading">¡Hola! soy Nelson Gonzalez Contreras <strong>Programador BackEnd</strong></h3>
-            <p style="text-align: justify;">Soy un Ingeniero mecatrónico con experiencia en el desarrollo de aplicaciones backend utilizando HTML, CSS y Python, en conjunto con frameworks como Angular, JavaScript (incluyendo Express y NodeJS), Django y Django Rest Framework. Competente en la gestión de bases de datos tanto Relacionales (MySQL, SQL Server, PostgreSQL) como NoSQL (MongoDB y Firebase). Mi enfoque en la programación backend está respaldado por habilidades fundamentales como trabajo en equipo, orientación a resultados y un compromiso firme con la excelencia. Además, poseo conocimientos en gobierno de datos, Big Data, Analytics y gestión de presupuestos. He implementado prácticas efectivas de versionado de APIs y gestionado proyectos con GitHub para garantizar un desarrollo backend sólido. Con el objetivo de contribuir al desarrollo de soluciones tecnológicas innovadoras y ser participe de equipos exitosos.</p>
+            <h3 class="subheading">¡Hola! soy Nelson Gonzalez Contreras <strong>Programador Fullstack</strong></h3>
+            <p style="text-align: justify;">Ingeniero mecatrónico con experiencia destacada en el desarrollo de aplicaciones Full stack, utilizando HTML, CSS, 
+                TypeScript y Python. En conjunto con frameworks como Angular, React, JavaScript (incluyendo Express y NodeJS), 
+                NestJS y Java. Competente en la gestión de bases de datos tanto Relacionales (MySQL, PostgreSQL) como NoSQL 
+                (MongoDB y Firebase). Poseo una sólida comprensión de la programación Full Stack, que está respaldada por 
+                habilidades fundamentales como trabajo en equipo, orientación a resultados y un compromiso firme con la excelencia. 
+                Además, poseo conocimientos en gobierno de datos, Big Data Analytics y gestión de presupuestos. He implementado 
+                prácticas eficientes y limpias en el desarrollo de aplicativos, haciendo uso de herramientas avanzadas de desarrollo y 
+                versionado como Bitbucket, GitLab y GitHub para un control de versiones. Con el objetivo de contribuir al desarrollo de 
+                soluciones tecnológicas innovadoras y ser partícipe de equipos exitosos.
+                </p>
             <div class="info-list row">
                 <div class="col-sm-6"><span>Interes : </span> Full-Time</div>
                 <div class="col-sm-6"><span>Dirección : </span> Colombia, Bogotá D.C.</div>
@@ -39,7 +48,10 @@
                                     <p class="logros-title">Logros</p>
                                         <ul class="logros-list">
                                             <li style="text-align: justify;">{{Experiencia.Logros.Uno}}</li>
-                                            <li style="text-align: justify;">{{Experiencia.Logros.Dos}}</li>
+                                
+                                            <li style="text-align: justify;" *ngIf="Experiencia.Logros.Dos">{{Experiencia.Logros.Dos}}</li>
+                                            <li style="text-align: justify;" *ngIf="Experiencia.Logros.Tres">{{Experiencia.Logros.Tres}}</li>
+                                            <li style="text-align: justify;" *ngIf="Experiencia.Logros.Cuatro">{{Experiencia.Logros.Cuatro}}</li>
                                         </ul>
                                 </div>
                             </div>
