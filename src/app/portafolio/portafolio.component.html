@@ -4,14 +4,14 @@
         <p style="text-align: justify;">
           Esta sección destaca una muestra de mis proyectos personales realizados con pasión y dedicación. Cada proyecto es un reflejo de mis habilidades como desarrollador backend. ¡Explora la lista a continuación para descubrir más sobre mis logros y experiencia en el desarrollo de aplicaciones web y análisis de datos!
         </p>
-        <ng-container *ngFor="let Proyectos of cv.dataProyectosDiseno">
+        <ng-container *ngFor="let Proyectos of cv.dataProyectosDiseno.slice().reverse()">
           <!-- Enlace a la sección de cada proyecto -->
           <a href="#{{Proyectos.Nombre}}" style="text-align: justify;">{{Proyectos.Nombre}}</a>
           <br>
         </ng-container>
       </div>
 
-    <div *ngFor="let Proyectos of cv.dataProyectosDiseno"  class="block-content" id="{{Proyectos.Nombre}}">
+    <div *ngFor="let Proyectos of cv.dataProyectosDiseno.slice().reverse()"  class="block-content" id="{{Proyectos.Nombre}}">
         <div class="block-content">
         
             <h3 class="block-title">{{Proyectos.Nombre}} </h3>
